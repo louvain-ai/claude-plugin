@@ -1,0 +1,15 @@
+{
+  "name": "louvain",
+  "description": "Louvain for Claude: company memory, fenced to what you can see.",
+  "owner": {
+    "name": "Louvain",
+    "email": "support@louvain.ai"
+  },
+  "plugins": [
+    {
+      "name": "louvain",
+      "source": "./",
+      "description": "Ask your company's memory from Claude, with every answer checked against the source that states it."
+    }
+  ]
+}

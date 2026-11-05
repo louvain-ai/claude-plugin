@@ -1,0 +1,16 @@
+{
+  "$schema": "https://code.claude.com/schemas/plugin.json",
+  "name": "louvain",
+  "displayName": "Louvain",
+  "version": "1.0.0",
+  "description": "Ask your company's memory from Claude: answers checked against your own mail, documents and chats, and fenced to exactly what you are permitted to see.",
+  "author": {
+    "name": "Louvain AI Ltd",
+    "email": "support@louvain.ai",
+    "url": "https://louvain.ai"
+  },
+  "homepage": "https://louvain.ai/docs/agents",
+  "repository": "https://github.com/louvain-ai/claude-plugin",
+  "license": "MIT",
+  "keywords": ["company-memory", "enterprise-search", "knowledge", "permissions", "citations", "mcp"]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "louvain": {
+      "type": "http",
+      "url": "https://louvain.ai/api/mcp"
+    }
+  }
+}

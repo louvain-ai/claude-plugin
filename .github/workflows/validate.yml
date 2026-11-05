@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Pinned to an exact version, so a CLI release cannot change what "valid" means
+      # between two identical commits. Raise it on purpose.
+      - name: Install Claude Code
+        run: npm install --global @anthropic-ai/claude-code@2.1.283
+
+      - name: Validate the plugin and the marketplace (warnings fail)
+        run: claude plugin validate --strict .
+
+      - name: Directory checks the CLI does not run
+        run: node scripts/check.mjs
+
+      # The one address the plugin names must still be an MCP endpoint that starts sign-in:
+      # a 401 whose WWW-Authenticate points at the protected-resource metadata.
+      - name: The MCP endpoint still starts OAuth
+        run: |
+          url=$(node -e 'console.log(require("./.mcp.json").mcpServers.louvain.url)')
+          headers=$(curl -sS -o /dev/null -D - -X POST "$url" -H 'content-type: application/json' -d '{}')
+          echo "$headers" | grep -E '^HTTP/[0-9.]+ 401' >/dev/null || { echo "expected 401 from $url"; echo "$headers"; exit 1; }
+          echo "$headers" | grep -i '^www-authenticate:.*resource_metadata=' >/dev/null || { echo "401 without resource_metadata"; exit 1; }
