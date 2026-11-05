@@ -53,11 +53,12 @@ If you already added Louvain by hand with `claude mcp add`, remove that entry wi
 Louvain's approval page states what the connection may do:
 
 - **Read.** It reads exactly what you can read. It cannot see your colleagues' sources, change a setting, invite anyone, or act with your role, even if you are an owner.
-- **Save files** is optional and **off unless you tick it**. With it, Claude can save what you ask it to keep:
-  - to your private *Saved by agents* space;
-  - or to a space you edit whose admin hasn't blocked agents.
+- **Make changes for you** is optional and **off unless you turn it on**. With it, Claude can work as you, labelled as an AI agent, in your private *Saved by agents* space and in spaces you edit whose admin hasn't blocked agents:
+  - save, copy, move and rename files and folders, and save new versions of files, with earlier versions kept;
+  - post in a file's discussion and change your plate;
+  - delete empty folders and files only agents wrote, which stay in Recently deleted for 30 days.
 
-  It cannot share anything or change who reads a space. Claude asks you before each save or other change it makes in Louvain.
+  Moving something to another space changes who can read it. Claude can't share anything, change who a space is shared with, delete a space or a file a person wrote, or delete anything for good. Claude asks you before each change it makes in Louvain.
 
 The connection lasts 30 days, then Louvain asks you to approve again. It ends at once when you disconnect it, when you leave the workspace, or when an administrator ends it.
 
@@ -111,7 +112,7 @@ Test before submitting, and again after any change to a skill. Each step either 
 3. **Sign in.** Run `/mcp`, choose **louvain** and pick **Authenticate**. Your browser opens Louvain's approval page. It should:
    - name the client as a program on this computer;
    - list what it may read;
-   - show **Save files for you** turned off.
+   - show **Make changes for you** turned off.
 
    Turn it on only if you want to test saving, then approve. `/mcp` then shows louvain as connected.
 4. **Check the connection.** Run `/louvain:whoami`. It should name you and your workspace and show a readable-source count above 0. A count of 0 means your sources haven't finished connecting.

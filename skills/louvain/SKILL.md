@@ -46,7 +46,7 @@ Only some connections can save. The person decided that when they approved this 
 - `louvain_save_to_space` saves where **everyone who reads that space** can read, search and have it cited. Use it only when the person named that space. Get its id from `louvain_spaces`.
 - `louvain_update` saves a new version of a file in a space where this person is an editor, and the new content replaces the whole file. Pass the `baseVersion` you last saw. If it is refused because someone saved since, read the file again and merge; don't overwrite.
 - What you save is labelled as written by an agent and never becomes a fact Louvain relies on.
-- **If no save tool is available,** this connection was approved without saving. Tell the person they can reconnect Louvain and tick "Save files" on the approval screen. Don't look for another way to save.
+- **If no save tool is available,** this connection was approved without saving. Tell the person they can reconnect Louvain and turn on "Make changes for you" on the approval screen. Don't look for another way to save.
 
 ## When something looks wrong
 
