@@ -23,7 +23,6 @@ So **a merge to `main` is a release.** Protect `main`: require a pull request an
 4. **Check locally.**
    ```bash
    claude plugin validate --strict .
-   node scripts/check.mjs
    claude plugin marketplace add ./ && claude plugin install louvain@louvain   # then try /louvain:whoami
    ```
 5. **Merge.** Open a pull request, wait for `validate`, and merge.

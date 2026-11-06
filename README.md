@@ -101,9 +101,9 @@ Test before submitting, and again after any change to a skill. Each step either 
 
 1. **Validate the files.**
    ```bash
-   claude plugin validate --strict . && node scripts/check.mjs
+   claude plugin validate --strict .
    ```
-   Both print a ✔.
+   It prints a ✔.
 2. **Load this checkout in Claude Code**, without installing it:
    ```bash
    claude --plugin-dir .

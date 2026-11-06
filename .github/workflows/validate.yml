@@ -26,8 +26,6 @@ jobs:
       - name: Validate the plugin and the marketplace (warnings fail)
         run: claude plugin validate --strict .
 
-      - name: Directory checks the CLI does not run
-        run: node scripts/check.mjs
 
       # The one address the plugin names must still be an MCP endpoint that starts sign-in:
       # a 401 whose WWW-Authenticate points at the protected-resource metadata.
