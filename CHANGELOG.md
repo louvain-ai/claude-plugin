@@ -13,6 +13,7 @@ First public release.
 - Licensed by Louvain AI Ltd.
 - Claude asks before each save or other change it makes in Louvain, because Louvain's tools now declare every change.
 - The approval screen's switch is **Make changes for you**, and the README lists what it allows.
+- A 1024 px square icon (`assets/icon.png`), and the privacy policy URL stated in the manifest.
 - The `louvain` skill says what `fast` does and which files `louvain_update` reaches, as the server has them.
 
 ## [0.1.0] - 2026-09-26

@@ -2,7 +2,7 @@
   "name": "louvain",
   "description": "Louvain for Claude: company memory, fenced to what you can see.",
   "owner": {
-    "name": "Louvain",
+    "name": "Louvain AI Ltd",
     "email": "support@louvain.ai"
   },
   "plugins": [

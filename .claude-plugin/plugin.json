@@ -10,6 +10,8 @@
     "url": "https://louvain.ai"
   },
   "homepage": "https://louvain.ai/docs/agents",
+  "privacyPolicyUrl": "https://louvain.ai/privacy",
+  "icon": "assets/icon.png",
   "repository": "https://github.com/louvain-ai/claude-plugin",
   "license": "MIT",
   "keywords": ["company-memory", "enterprise-search", "knowledge", "permissions", "citations", "mcp"]
